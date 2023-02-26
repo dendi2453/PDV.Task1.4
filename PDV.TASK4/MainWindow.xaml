@@ -1,0 +1,95 @@
+﻿<Window x:Class="PDV.TASK4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PDV.TASK4" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        Title="MainWindow"
+        Height="450"
+        Width="800">
+
+    <Grid x:Name="one"
+        MouseDown="one_MouseDown"
+          Background="Transparent">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="800"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="img\stud.jpg"
+               Height="600"
+               Width="800"
+               Opacity="0.6" Grid.ColumnSpan="2"
+               />
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Margin="5 5 0 0" Grid.ColumnSpan="2"
+                    
+            >
+            <TextBlock Text="Детский дом" 
+                       FontSize="25" 
+                       Margin="0 20 0 0" 
+                       Foreground="Black"
+                       />
+
+            <TextBlock Text="Неудачники" 
+                       FontSize="25" 
+                       Margin="10 50 0 0"
+                       Foreground="Red"
+                       FontWeight="Bold"
+                       
+                       />
+        </StackPanel>
+        <TextBlock 
+                       FontSize="36" 
+                       Margin="76,180,328,164"
+                       Foreground="Black" FontWeight="Bold" Grid.ColumnSpan="2" RenderTransformOrigin="0.503,0.557"
+                   
+                       ><Run Text="Не сдал экзамен?!"/><Run Text=""/><LineBreak/><Run Text="Наши двери открыты! "/></TextBlock>
+        <TextBlock 
+                    FontSize="18" 
+                       Margin="10,336,223,49"
+                       Foreground="Red"
+                   Background="Transparent" FontWeight="Bold" Grid.ColumnSpan="2"><Run Text="Вкусно кормят и есть,где поспать! "/><LineBreak/><Run Text="Запиши наш номер телефона,ведь скоро сессия: +7(953) 240-04-40"/><Run/></TextBlock>
+
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0 20 0 0" Orientation="Horizontal" Width="430" Grid.ColumnSpan="2">
+            <Button Name="About_us"
+                    Content="О нас"
+                    Background="Red"
+                    Style="{StaticResource MaterialDesignFlatLightButton}" FontSize="18" VerticalContentAlignment="Center" Foreground="Black"
+                    Width="80"
+                    />
+            <Button Name="Items"
+                    Content="Поддержка"
+                    Background="Red"
+                    Style="{StaticResource MaterialDesignFlatLightButton}" FontSize="18" VerticalContentAlignment="Center" Foreground="Black"
+                    Margin="0 0 0 0"
+                    Width="158"
+                    />
+            <Button Name="Question"
+                    Content="Задать вопрос"
+                    Background="Red"
+                    Style="{StaticResource MaterialDesignFlatLightButton}" FontSize="18" VerticalContentAlignment="Center" Foreground="Black"
+                    Width="157"
+                    />
+
+        </StackPanel>
+        <Border CornerRadius="150, 150, 130, 150" Margin="697,75,15,296" Grid.ColumnSpan="2" RenderTransformOrigin="0.397,0.797">
+            <Border.Background>
+                <ImageBrush Stretch="Fill" ImageSource="img\log.jpg"></ImageBrush>
+            </Border.Background>
+
+        </Border>
+        <materialDesign:PackIcon Kind="Close"
+                                 Height="20"
+                                 Width="20"
+                                 HorizontalAlignment="Right"
+                                 Margin="0 5 5 0"
+                                 MouseDown="PackIcon_MouseDown"
+                                 Cursor="Hand" ToolTip="Закрыть" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
